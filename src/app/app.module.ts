@@ -20,6 +20,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AcceptedRequestCardComponent } from './components/accepted-request-card/accepted-request-card.component';
 import { GroupsCardComponent } from './components/groups-card/groups-card.component';
 import { GameListComponent } from './components/game-list/game-list.component';
+import { GameCardComponent } from './components/game-card/game-card.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -49,7 +50,8 @@ const routes: Routes = [
     NavbarComponent,
     AcceptedRequestCardComponent,
     GroupsCardComponent,
-    GameListComponent
+    GameListComponent,
+    GameCardComponent
   ],
   imports: [
     BrowserModule,
