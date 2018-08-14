@@ -6,6 +6,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
 import { CreateGroupPageComponent } from './pages/create-group-page/create-group-page.component';
+import { SearchGroupPageComponent } from './pages/search-group-page/search-group-page.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CreateGroupPageComponent } from './pages/create-group-page/create-group
     HomePageComponent,
     LoginPageComponent,
     SignUpPageComponent,
-    CreateGroupPageComponent
+    CreateGroupPageComponent,
+    SearchGroupPageComponent
   ],
   imports: [
     BrowserModule
