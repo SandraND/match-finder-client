@@ -22,6 +22,8 @@ import { GroupsCardComponent } from './components/groups-card/groups-card.compon
 import { GameListComponent } from './components/game-list/game-list.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { RecentGroupsComponent } from './components/recent-groups/recent-groups.component';
+import { AuthService } from './services/auth.service';
+import { GroupService } from './services/group.service';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -61,7 +63,10 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    GroupService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
