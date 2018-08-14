@@ -10,7 +10,6 @@ import { environment } from '../../environments/environment';
 export class AuthService {
 
   private user: any;
-  private password: any;
   private userChange: Subject<any> = new Subject();
 
   private API_URL = environment.apiURL;
@@ -23,7 +22,6 @@ export class AuthService {
 
   private setUser(user?: any) {
     this.user = user;
-    this.password = this.password;
     this.userChange.next(user);
     return user;
   }

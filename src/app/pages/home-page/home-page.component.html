@@ -1,3 +1,17 @@
-<p>
-  home-page works!
-</p>
+<div class="container">
+  <div id="create-component-home" class="create">
+    <a [routerLink]= "['/groups/add']"> CREATE </a>
+  </div>
+
+  <div id="search-component-home" class="search">
+    <a [routerLink]="['/groups/search']"> SEARCH </a>
+  </div>
+
+  <div id="groups-component-home" class="search">
+    <a [routerLink]="['/groups']"> MY GROUPS </a>
+  </div>
+
+  <div id="recent-component-home" class="search">
+    <a [routerLink]="['/groups/recent']"> RECENT GAMES </a>
+  </div>
+</div>

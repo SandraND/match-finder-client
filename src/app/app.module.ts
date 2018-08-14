@@ -34,7 +34,8 @@ const routes: Routes = [
   {path: 'profile', component: ProfilePageComponent},
   {path: 'groups/:id', component: DetailGroupPageComponent},
   {path: 'games', component: ListGamesPageComponent},
-  {path: 'groups', component: MyGroupsPageComponent}
+  {path: 'groups', component: MyGroupsPageComponent},
+  {path: 'groups/recent', component: RecentGroupsComponent}
 ];
 
 @NgModule({
