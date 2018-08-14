@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -12,6 +14,18 @@ import { DetailGroupPageComponent } from './pages/detail-group-page/detail-group
 import { ListGamesPageComponent } from './pages/list-games-page/list-games-page.component';
 import { MyGroupsPageComponent } from './pages/my-groups-page/my-groups-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+
+const routes: Routes = [
+  {path: '', component: HomePageComponent},
+  {path: 'login', component: LoginPageComponent},
+  {path: 'signup', component: SignUpPageComponent},
+  {path: 'groups/add', component: CreateGroupPageComponent},
+  {path: 'groups/search', component: SearchGroupPageComponent},
+  {path: 'profile', component: ProfilePageComponent},
+  {path: 'groups/:id', component: DetailGroupPageComponent},
+  {path: 'games', component: ListGamesPageComponent},
+  {path: 'groups', component: MyGroupsPageComponent}
+];
 
 @NgModule({
   declarations: [
@@ -28,7 +42,9 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     ErrorPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
