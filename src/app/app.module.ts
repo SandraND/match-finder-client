@@ -21,6 +21,7 @@ import { AcceptedRequestCardComponent } from './components/accepted-request-card
 import { GroupsCardComponent } from './components/groups-card/groups-card.component';
 import { GameListComponent } from './components/game-list/game-list.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
+import { RecentGroupsComponent } from './components/recent-groups/recent-groups.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -51,7 +52,8 @@ const routes: Routes = [
     AcceptedRequestCardComponent,
     GroupsCardComponent,
     GameListComponent,
-    GameCardComponent
+    GameCardComponent,
+    RecentGroupsComponent
   ],
   imports: [
     BrowserModule,
