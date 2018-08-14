@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "match-finder-client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
