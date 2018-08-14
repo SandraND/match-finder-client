@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
@@ -14,6 +16,7 @@ import { DetailGroupPageComponent } from './pages/detail-group-page/detail-group
 import { ListGamesPageComponent } from './pages/list-games-page/list-games-page.component';
 import { MyGroupsPageComponent } from './pages/my-groups-page/my-groups-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -39,11 +42,13 @@ const routes: Routes = [
     DetailGroupPageComponent,
     ListGamesPageComponent,
     MyGroupsPageComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
