@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
+import { CreateGroupPageComponent } from './pages/create-group-page/create-group-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     LoginPageComponent,
-    SignUpPageComponent
+    SignUpPageComponent,
+    CreateGroupPageComponent
   ],
   imports: [
     BrowserModule
