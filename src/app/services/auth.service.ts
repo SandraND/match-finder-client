@@ -10,6 +10,7 @@ import { environment } from '../../environments/environment';
 export class AuthService {
 
   private user: any;
+  private password: any;
   private userChange: Subject<any> = new Subject();
 
   private API_URL = environment.apiURL;
@@ -22,6 +23,7 @@ export class AuthService {
 
   private setUser(user?: any) {
     this.user = user;
+    this.password = this.password;
     this.userChange.next(user);
     return user;
   }
@@ -39,4 +41,15 @@ export class AuthService {
         }
       });
   }
+
+  login(user: any): Promise<any> {
+
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${this.API_URL}/login`, user, options)
+      .toPromise()
+      .then((data) => this.setUser(data));
+  }
+
 }
