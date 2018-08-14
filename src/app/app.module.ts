@@ -10,6 +10,7 @@ import { SearchGroupPageComponent } from './pages/search-group-page/search-group
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { DetailGroupPageComponent } from './pages/detail-group-page/detail-group-page.component';
 import { ListGamesPageComponent } from './pages/list-games-page/list-games-page.component';
+import { MyGroupsPageComponent } from './pages/my-groups-page/my-groups-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ListGamesPageComponent } from './pages/list-games-page/list-games-page.
     SearchGroupPageComponent,
     ProfilePageComponent,
     DetailGroupPageComponent,
-    ListGamesPageComponent
+    ListGamesPageComponent,
+    MyGroupsPageComponent
   ],
   imports: [
     BrowserModule
