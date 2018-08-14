@@ -19,6 +19,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AcceptedRequestCardComponent } from './components/accepted-request-card/accepted-request-card.component';
 import { GroupsCardComponent } from './components/groups-card/groups-card.component';
+import { GameListComponent } from './components/game-list/game-list.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -47,7 +48,8 @@ const routes: Routes = [
     ErrorPageComponent,
     NavbarComponent,
     AcceptedRequestCardComponent,
-    GroupsCardComponent
+    GroupsCardComponent,
+    GameListComponent
   ],
   imports: [
     BrowserModule,
