@@ -2,7 +2,7 @@
   <div [ngClass]="{'is-user': user}" class="info-profile">
     <hr>
     <div class="user-info">
-      <label *ngIf="user">Welcome  {{ user.username }} !</label>
+      <label *ngIf="user">Welcome  {{ user.username }}!</label>
     </div>
     <hr>
   </div>
@@ -18,3 +18,4 @@
     <a [routerLink]= "['#']"> RATINGS </a>
   </div>
 </div>
+<app-recent-groups></app-recent-groups>
