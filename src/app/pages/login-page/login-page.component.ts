@@ -20,7 +20,7 @@ export class LoginPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(form) {
+  submitLoginForm(form) {
 
     this.authService.login({
       username: this.username,
@@ -32,7 +32,8 @@ export class LoginPageComponent implements OnInit {
     .catch(error => {
       console.log(error);
     });
-
+  }
+  submitSignupForm(form) {
     this.authService.signup({
       username: this.username,
         password: this.password
