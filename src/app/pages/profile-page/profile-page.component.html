@@ -1,3 +1,20 @@
-<p>
-  profile-page works!
-</p>
+<div class="profile">
+  <div [ngClass]="{'is-user': user}" class="info-profile">
+    <hr>
+    <div class="user-info">
+      <label *ngIf="user">Welcome  {{ user.username }} !</label>
+    </div>
+    <hr>
+  </div>
+  <div class="my-games">
+    <a [routerLink]= "['/groups']"> MY GAMES </a>
+  </div>
+
+  <div class="friends">
+      <a [routerLink]= "['#']"> FRIENDS </a>
+  </div>
+
+  <div class="ratings">
+    <a [routerLink]= "['#']"> RATINGS </a>
+  </div>
+</div>
