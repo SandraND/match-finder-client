@@ -1,0 +1,22 @@
+#recent-component-home {
+    text-align: center;
+    width: 100%;
+    height: 130px;
+    margin-bottom: 2rem;
+    background: url('../../whf.jpeg') center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    vertical-align: middle;
+    line-height: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+}
+
+#recent-component-home a {
+    font-size: 45px;
+}
