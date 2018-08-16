@@ -10,7 +10,7 @@ export class AuthService {
   private user: any;
   private userChange: Subject<any> = new Subject();
 
-  private API_URL = environment.apiURL;
+  private API_URL = environment.apiURL + 'auth';
 
   userChange$: Observable<any> = this.userChange.asObservable();
 

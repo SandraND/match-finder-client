@@ -9,42 +9,44 @@ import { environment } from '../../environments/environment';
 })
 export class GroupService {
 
-  private group: Array<any> = [
+  private group: any = [
     {
       games: ['Warhammer40k', 'Magic', 'X-Wing'],
     }
   ];
-  private groupChange: Subject<any> = new Subject();
 
-  private API_URL = environment.apiURL;
-
-  groupChange$: Observable<any> = this.groupChange.asObservable();
-
-  getGroups() {
-    return this.group;
-  }
-  // getGames() {
-  //   return this.group.games;
-  // }
-  getGroup(id: any) {
-    return this.group.find(group =>
-      group.id === parseInt(id, 10)
-    );
-  }
-  deleteOne(id: any) {
-    return this.group.find(group =>
-      group.id === parseInt(id, 10)
-    ).delete();
-  }
-
-  // createOne() {
-
-  // }
+  private API_URL = environment.apiURL + 'groups';
 
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
+  // getGroups() {
+  //   return this.group;
+  // }
+  // getGames() {
+  //   return this.group.games;
+  // }
+
+  // getGroup(id: any) {
+  //   return this.group.find(group =>
+  //     group.id === parseInt(id, 10)
+  //   );
+  // }
+  // deleteOne(id: any) {
+  //   return this.group.find(group =>
+  //     group.id === parseInt(id, 10)
+  //   ).delete();
+  // }
+
+  createOne(group: any) {
+
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${this.API_URL}`, group, options)
+    .toPromise();
+  }
 
 }

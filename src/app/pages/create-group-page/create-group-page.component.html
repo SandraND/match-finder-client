@@ -5,36 +5,49 @@
 <h1>Create a new group</h1>
 
 <div class="container">
-  <div class="group-name">
-    <label>Group name </label>
-    <input type="text">
-  </div>
-  <div class="group-info">
-    <label>Players [2-4] </label>
-    <input type="text">
-    
-    <label>Points </label>
-    <input type="text">
-  </div>
-  <div class="group-direction">
-    <label>City </label>
-    <input type="text">
+  <form (ngSubmit)="submitForm(form)" #form="ngForm">
 
-    <label>Street </label>
-    <input type="text">
-  </div>
+    <div class="group-name">
+      <label>Group name </label>
+      <input type="text" name="groupname" [(ngModel)]="groupname" #groupnameField="ngModel">
+    </div>
 
-  <div class="group-type">
-    <label>Type of game </label>
-    <input type="text">
-  </div>
+    <div class="group-info">
+      <label>Players [2-4] </label>
+      <input type="number" name="numplayers" [(ngModel)]="numplayers" #numplayersField="ngModel">
+      
+      <label>Points </label>
+      <input type="number" name="numpoints" [(ngModel)]="numpoints" #numpointsField="ngModel">
+    </div>
 
-  <div class="group-description">
-    <label>Description </label>
-    <input type="text">
-  </div>
-  <div class="group-buttons">
-    <button>Cancel</button>
-    <button>Create</button>
-  </div>
+    <div class="group-direction">
+      <label>City </label>
+      <input type="text" name="city" [(ngModel)]="city" #cityField="ngModel">
+
+      <label>Address </label>
+      <input type="text" name="address" [(ngModel)]="address" #addressField="ngModel">
+
+      <label>Date </label>
+      <input type="date" name="date" [(ngModel)]="date" #dateField="ngModel">
+    </div>
+
+    <div class="group-type">
+      <label>Type of game </label>
+      <input type="text" name="gametype" [(ngModel)]="gametype" #gametypeField="ngModel">
+    </div>
+
+    <div class="group-description">
+      <label>Description </label>
+      <input type="text" name="description" [(ngModel)]="description" #descriptionField="ngModel">
+    </div>
+
+    <div class="group-game">
+      <label>Game </label>
+      <input type="text" name="game" [(ngModel)]="game" #gameField="ngModel">
+    </div>
+    <div class="group-buttons field submit">
+      <button [routerLink]="['/']">Back</button>
+      <button type="submit">Create</button>
+    </div>
+  </form>
 </div>
