@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GroupService } from '../../services/group.service';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-game-card',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-card.component.css']
 })
 export class GameCardComponent implements OnInit {
+  @Input() game: Object;
 
-  constructor() { }
+  constructor(
+
+    private groupService: GroupService
+  ) { }
 
   ngOnInit() {
   }
