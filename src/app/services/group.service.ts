@@ -22,12 +22,24 @@ export class GroupService {
     private httpClient: HttpClient
   ) { }
 
-  // getGroups() {
-  //   return this.group;
-  // }
-  // getGames() {
-  //   return this.group.games;
-  // }
+  getGroups() {
+
+    const options = {
+      withCredentials: true
+    };
+
+    return this.httpClient.get(`${this.API_URL}`, options)
+      .toPromise();
+  }
+
+  getGames() {
+    const options = {
+      withCredentials: true
+    };
+
+    return this.httpClient.get(`${this.API_URL}/games`, options)
+    .toPromise();
+  }
 
   // getGroup(id: any) {
   //   return this.group.find(group =>
