@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { GroupService } from '../../services/group.service';
 
 @Component({
   selector: 'app-detail-group-page',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailGroupPageComponent implements OnInit {
 
-  constructor() { }
+  group: any;
+
+  constructor(
+    private groupService: GroupService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.params
+    .subscribe((params) => {
+      this.groupService.getGroup(params.id)
+      .then(data => this.group = data);
+    });
   }
 
 }

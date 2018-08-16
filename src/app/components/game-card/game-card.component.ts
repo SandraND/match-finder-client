@@ -11,8 +11,6 @@ export class GameCardComponent implements OnInit {
   @Input() game: Object;
 
   constructor(
-
-    private groupService: GroupService
   ) { }
 
   ngOnInit() {

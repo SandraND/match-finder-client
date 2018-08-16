@@ -17,7 +17,7 @@ export class CreateGroupPageComponent implements OnInit {
   address: string;
   date: Date;
   description: string;
-  game: string;
+  game: Object;
 
   constructor(
     private groupService: GroupService,

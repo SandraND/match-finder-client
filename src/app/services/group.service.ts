@@ -41,16 +41,13 @@ export class GroupService {
     .toPromise();
   }
 
-  // getGroup(id: any) {
-  //   return this.group.find(group =>
-  //     group.id === parseInt(id, 10)
-  //   );
-  // }
-  // deleteOne(id: any) {
-  //   return this.group.find(group =>
-  //     group.id === parseInt(id, 10)
-  //   ).delete();
-  // }
+  getGroup(id: any): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.API_URL}/${id}`, options)
+    .toPromise();
+  }
 
   createOne(group: any) {
 
