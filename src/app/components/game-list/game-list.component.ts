@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GroupService } from '../../services/group.service';
 
 @Component({
   selector: 'app-game-list',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameListComponent implements OnInit {
 
-  constructor() { }
+  games: any;
+
+  constructor(
+    private groupService: GroupService
+  ) { }
 
   ngOnInit() {
+    this.groupService.getGames()
+    .then(data => this.games = data);
   }
 
 }
