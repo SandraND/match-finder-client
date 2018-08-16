@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-group-page.component.css']
 })
 export class CreateGroupPageComponent implements OnInit {
-
+  owner: string;
   groupname: string;
   numplayers: Number;
   numpoints: Number;
@@ -29,6 +29,7 @@ export class CreateGroupPageComponent implements OnInit {
 
   submitForm(form) {
     this.groupService.createOne({
+      owner: this.owner,
       groupname: this.groupname,
       numplayers: this.numplayers,
       numpoints: this.numpoints,
