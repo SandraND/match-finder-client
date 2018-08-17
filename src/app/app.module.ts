@@ -27,6 +27,7 @@ import { GroupService } from './services/group.service';
 import { InitAuthGuard } from './guards/init-auth.guard';
 import { RequireAnonGuard } from './guards/require-anon.guard';
 import { RequireUserGuard } from './guards/require-user.guard';
+import { FilterPipe } from './pipes/filter.pipe';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent, canActivate: [ InitAuthGuard ]},
@@ -60,7 +61,8 @@ const routes: Routes = [
     GroupsCardComponent,
     GameListComponent,
     GameCardComponent,
-    RecentGroupsComponent
+    RecentGroupsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
