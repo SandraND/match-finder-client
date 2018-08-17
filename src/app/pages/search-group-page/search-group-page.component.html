@@ -1,3 +1,58 @@
-<p>
-  search-group-page works!
-</p>
+<form (ngSubmit)="submitForm(form)" #form="ngForm" [ngClass]="{'is-processing': processing}">
+
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && searchField.errors}">
+      <label>Search a group </label>
+      <input type="text" name="search" [(ngModel)]="search" #searchField="ngModel" required [disabled]="processing"/>
+      <div *ngIf="feedbackEnabled && searchField.errors">
+        <p *ngIf="searchField.errors.required" class="validation">search required</p>
+      </div>
+    </div>
+  
+    <div class="field submit">
+      <button type="submit" [disabled]="processing">Search</button>
+      <div *ngIf="feedbackEnabled && form.invalid">
+        <p class="validation">there are errors in the form, please review the fields</p>
+      </div>
+    </div>
+  </form>
+
+<div *ngIf="group">
+  <div class="search-group-detail">
+    <h3>{{ group.groupname }}</h3>
+
+    <h4>Players: </h4>
+    <label>{{ group.numplayers }}</label>
+  
+    <h4>Points: </h4>
+    <label>{{ group.points }}</label>
+  
+    <h4>Type of game: </h4>
+    <label>{{ group.gametype }}</label>
+  
+    <h4>City: </h4>
+    <label>{{ group.city }}</label>
+  
+    <h4>Address: </h4>
+    <label>{{ group.address }}</label>
+  
+    <h4>Date: </h4>
+    <label>{{ group.date }}</label>
+    
+  
+    <h4>Description: </h4>
+    <label>{{ group.description }}</label>
+  
+    <h4>Game: </h4>
+    <label>{{ group.game }}</label>
+  </div>
+</div>
+
+
+
+<hr>
+
+<app-game-list></app-game-list>
+
+<hr>
+
+<app-recent-groups></app-recent-groups>
