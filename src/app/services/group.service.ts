@@ -49,6 +49,13 @@ export class GroupService {
     .toPromise();
   }
 
+  searchGroup(groupname: any): any {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.API_URL}/search?q=${groupname}`, options).toPromise();
+  }
+
   createOne(group: any) {
 
     const options = {
@@ -57,5 +64,7 @@ export class GroupService {
     return this.httpClient.post(`${this.API_URL}`, group, options)
     .toPromise();
   }
+
+
 
 }
