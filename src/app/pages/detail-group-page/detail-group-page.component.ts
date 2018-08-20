@@ -24,4 +24,6 @@ export class DetailGroupPageComponent implements OnInit {
     });
   }
 
+
+
 }
