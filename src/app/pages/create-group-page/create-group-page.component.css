@@ -2,7 +2,7 @@ form {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    /* margin: 1rem; */
+    margin: 1rem;
     background-color: rgb(40, 46, 56);
     color: rgb(138, 144, 161);
 }
