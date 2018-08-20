@@ -24,14 +24,16 @@ import { GameCardComponent } from './components/game-card/game-card.component';
 import { RecentGroupsComponent } from './components/recent-groups/recent-groups.component';
 import { AuthService } from './services/auth.service';
 import { GroupService } from './services/group.service';
+import { UserService } from './services/user.service';
+
 import { InitAuthGuard } from './guards/init-auth.guard';
 import { RequireAnonGuard } from './guards/require-anon.guard';
 import { RequireUserGuard } from './guards/require-user.guard';
 import { FilterPipe } from './pipes/filter.pipe';
-import { MapService } from './services/map.service';
 import { GameListAllComponent } from './components/game-list-all/game-list-all.component';
 import { SearchGroupDetailComponent } from './components/search-group-detail/search-group-detail.component';
-// import { MapBoxComponent } from './component/map-box/map-box.component';
+import { PlayersListPageComponent } from './pages/players-list-page/players-list-page.component';
+import { SearchUserDetailComponent } from './components/search-user-detail/search-user-detail.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent, canActivate: [ InitAuthGuard ]},
@@ -45,6 +47,7 @@ const routes: Routes = [
   {path: 'games', component: ListGamesPageComponent, canActivate: [ RequireUserGuard ]},
   {path: 'groups', component: MyGroupsPageComponent, canActivate: [ RequireUserGuard ]},
   {path: 'groups/recent', component: RecentGroupsComponent, canActivate: [ RequireUserGuard ]},
+  {path: 'players', component: PlayersListPageComponent, canActivate: [RequireUserGuard]},
   {path: '**', redirectTo: ''}
 ];
 
@@ -71,8 +74,9 @@ const routes: Routes = [
     FilterPipe,
     GameListAllComponent,
     SearchGroupDetailComponent,
-    SearchGroupDetailComponent
-    // MapBoxComponent
+    SearchGroupDetailComponent,
+    PlayersListPageComponent,
+    SearchUserDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -81,9 +85,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [
-    MapService,
     AuthService,
     GroupService,
+    UserService,
     InitAuthGuard,
     RequireAnonGuard,
     RequireUserGuard

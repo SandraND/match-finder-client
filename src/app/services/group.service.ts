@@ -22,6 +22,15 @@ export class GroupService {
     private httpClient: HttpClient
   ) { }
 
+  getRecentGroups() {
+    const options = {
+      withCredentials: true
+    };
+
+    return this.httpClient.get(`${this.API_URL}/recent`, options)
+    .toPromise();
+  }
+
   getGroups() {
 
     const options = {
@@ -62,7 +71,8 @@ export class GroupService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.API_URL}/search?q=${groupname}`, options).toPromise();
+    return this.httpClient.get(`${this.API_URL}/search?q=${groupname}`, options)
+    .toPromise();
   }
 
   createOne(group: any) {
