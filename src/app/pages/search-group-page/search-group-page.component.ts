@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { GroupService } from '../../services/group.service';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -31,6 +32,7 @@ export class SearchGroupPageComponent implements OnInit {
       this.groupService.searchGroup(this.search)
       .then((result) => {
         this.group = result;
+
         this.processing = false;
       })
       .catch(err => {
@@ -40,7 +42,5 @@ export class SearchGroupPageComponent implements OnInit {
       });
     }
   }
-
-
 
 }

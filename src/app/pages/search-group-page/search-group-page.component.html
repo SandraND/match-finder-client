@@ -15,43 +15,21 @@
       </div>
     </div>
   </form>
+<hr>
+<!-- <app-map-box></app-map-box> -->
 
+
+
+<hr>  
 <div *ngIf="group">
-  <div class="search-group-detail">
-    <h3>{{ group.groupname }}</h3>
-
-    <h4>Players: </h4>
-    <label>{{ group.numplayers }}</label>
-  
-    <h4>Points: </h4>
-    <label>{{ group.points }}</label>
-  
-    <h4>Type of game: </h4>
-    <label>{{ group.gametype }}</label>
-  
-    <h4>City: </h4>
-    <label>{{ group.city }}</label>
-  
-    <h4>Address: </h4>
-    <label>{{ group.address }}</label>
-  
-    <h4>Date: </h4>
-    <label>{{ group.date }}</label>
-    
-  
-    <h4>Description: </h4>
-    <label>{{ group.description }}</label>
-  
-    <h4>Game: </h4>
-    <label>{{ group.game }}</label>
-  </div>
+  <app-search-group-detail [group]="group"></app-search-group-detail>
 </div>
 
 
 
 <hr>
 
-<app-game-list></app-game-list>
+<app-game-list-all></app-game-list-all>
 
 <hr>
 
