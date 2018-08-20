@@ -28,6 +28,10 @@ import { InitAuthGuard } from './guards/init-auth.guard';
 import { RequireAnonGuard } from './guards/require-anon.guard';
 import { RequireUserGuard } from './guards/require-user.guard';
 import { FilterPipe } from './pipes/filter.pipe';
+import { MapService } from './services/map.service';
+import { GameListAllComponent } from './components/game-list-all/game-list-all.component';
+import { SearchGroupDetailComponent } from './components/search-group-detail/search-group-detail.component';
+// import { MapBoxComponent } from './component/map-box/map-box.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent, canActivate: [ InitAuthGuard ]},
@@ -35,6 +39,7 @@ const routes: Routes = [
   {path: 'signup', component: SignUpPageComponent, canActivate: [ RequireAnonGuard ]},
   {path: 'groups/add', component: CreateGroupPageComponent, canActivate: [ RequireUserGuard ]},
   {path: 'groups/search', component: SearchGroupPageComponent, canActivate: [ RequireUserGuard ]},
+  {path: 'groups/:id/apply', component: SearchGroupDetailComponent, canActivate: [ RequireUserGuard]},
   {path: 'profile', component: ProfilePageComponent, canActivate: [ RequireUserGuard ]},
   {path: 'groups/:id', component: DetailGroupPageComponent, canActivate: [ RequireUserGuard ]},
   {path: 'games', component: ListGamesPageComponent, canActivate: [ RequireUserGuard ]},
@@ -60,9 +65,14 @@ const routes: Routes = [
     AcceptedRequestCardComponent,
     GroupsCardComponent,
     GameListComponent,
+    GameListAllComponent,
     GameCardComponent,
     RecentGroupsComponent,
-    FilterPipe
+    FilterPipe,
+    GameListAllComponent,
+    SearchGroupDetailComponent,
+    SearchGroupDetailComponent
+    // MapBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +81,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [
+    MapService,
     AuthService,
     GroupService,
     InitAuthGuard,
