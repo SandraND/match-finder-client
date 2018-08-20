@@ -25,17 +25,6 @@ export class SearchGroupDetailComponent implements OnInit {
   }
 
   acceptOne(groupId: any) {
-    console.log('------PARAMS----------');
-    console.log(this.route.params);
-    console.log('---------CURRENT USER----------');
-    console.log(this.user);
-    console.log('---------USER ID----------');
-    console.log(this.user._id);
-    console.log('---------BUTTON ACTION----------');
-    console.log('CLICK APPLY');
-    console.log('---------GROUP INFO----------');
-    console.log(this.group);
-
     this.groupService.acceptOne(this.user._id, groupId)
     .then((data) => {
       this.group = data;
