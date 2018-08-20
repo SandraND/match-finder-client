@@ -12,6 +12,7 @@
     background-image: url('../../warhammer.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 4px 2px  4px 4px rgb(13, 15, 21);
 }
 
 #search-component-home {
@@ -22,6 +23,7 @@
     background: url('../../xwing.jpg') center center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 4px 2px  4px 4px rgb(13, 15, 21);
 }
 
 #groups-component-home {
@@ -32,6 +34,7 @@
     background: url('../../magic.jpeg') center center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 4px 2px  4px 4px rgb(13, 15, 21);
 }
 
 a {
@@ -41,5 +44,6 @@ a {
     font-weight: bold;
     font-size: 50px;
     color: white;
+    text-shadow: -2px 0px black, 0px 2px black, 2px 0px black, 0px -2px black;
 }
 
