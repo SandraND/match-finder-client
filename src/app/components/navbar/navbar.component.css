@@ -1,9 +1,9 @@
   .nav {
     height: 50px;
     width: 100%;
-    background-color: #122b47;
+    background-color: #1c1f27;
     position: relative;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
   
   .nav > .nav-header {
@@ -39,7 +39,7 @@
   }
   
   .nav > .nav-links > a:hover {
-    background-color: #122b47;
+    background-color: #1c1f27;
   }
   
   .nav > #nav-check {
@@ -60,7 +60,7 @@
       padding: 13px;
     }
     .nav > .nav-btn > label:hover {
-      background-color: #122b47;
+      background-color: #1c1f27;
     }
     .nav > .nav-btn > label > span {
       display: block;
@@ -71,7 +71,7 @@
     .nav > .nav-links {
       position: absolute;
       display: block;
-      background-color: #122b47;
+      background-color: #1c1f27;
       transition: all 0.3s ease-in;
       overflow-y: hidden;
       top: 50px;
