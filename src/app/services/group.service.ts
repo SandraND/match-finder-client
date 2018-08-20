@@ -41,6 +41,15 @@ export class GroupService {
     .toPromise();
   }
 
+  getAllGames() {
+    const options = {
+      withCredentials: true
+    };
+
+    return this.httpClient.get(`${this.API_URL}/games/all`, options)
+    .toPromise();
+  }
+
   getGroup(id: any): Promise<any> {
     const options = {
       withCredentials: true
@@ -62,6 +71,15 @@ export class GroupService {
       withCredentials: true
     };
     return this.httpClient.post(`${this.API_URL}`, group, options)
+    .toPromise();
+  }
+
+  acceptOne(userId: any, groupId: any): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+
+    return this.httpClient.post(`${this.API_URL}/apply/${userId}&${groupId}`, options)
     .toPromise();
   }
 
