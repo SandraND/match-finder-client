@@ -1,23 +1,24 @@
 <form (ngSubmit)="submitForm(form)" #form="ngForm" [ngClass]="{'is-processing': processing}">
 
-    <div class="field" [ngClass]="{'has-error': feedbackEnabled && searchField.errors}">
-      <label>Search a group </label>
-      <input type="text" name="search" [(ngModel)]="search" #searchField="ngModel" required [disabled]="processing"/>
-      <div *ngIf="feedbackEnabled && searchField.errors">
-        <p *ngIf="searchField.errors.required" class="validation">search required</p>
-      </div>
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && searchField.errors}">
+    <label>Search a group </label>
+    <input type="text" name="search" [(ngModel)]="search" #searchField="ngModel" required [disabled]="processing" />
+    <div *ngIf="feedbackEnabled && searchField.errors">
+      <p *ngIf="searchField.errors.required" class="validation">search required</p>
     </div>
-  
-    <div class="field submit">
-      <button type="submit" [disabled]="processing">Search</button>
-      <div *ngIf="feedbackEnabled && form.invalid">
-        <p class="validation">there are errors in the form, please review the fields</p>
-      </div>
+  </div>
+
+  <div class="field submit">
+    <button type="submit" [disabled]="processing">Search</button>
+    <div *ngIf="feedbackEnabled && form.invalid">
+      <p class="validation">there are errors in the form, please review the fields</p>
     </div>
-  </form>
+  </div>
+</form>
+
 <!-- <app-map-box></app-map-box> -->
 
-  
+
 <div *ngIf="group">
   <app-search-group-detail [group]="group"></app-search-group-detail>
 </div>
