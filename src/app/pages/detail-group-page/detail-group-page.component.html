@@ -1,37 +1,50 @@
-<h1>Group Detail</h1>
-
 <div class="group-detail" *ngIf="group">
 
-  
-  <h3>{{ group.groupname }}</h3>
+  <div class="container">
+    <div class="group-name">
+      <h3>{{ group.groupname }}</h3>
+    </div>
+    <div class="group-info-pp">
+      <div class="players">
+        <h4>Players: </h4>
+        <label>{{ group.numplayers }}</label>
+      </div>
+      <div class="points">
+        <h4>Points: </h4>
+        <label>{{ group.points }}</label>
+      </div>
+    </div>
 
-    <h4>Players: </h4>
-    <label>{{ group.numplayers }}</label>
-  
-    <h4>Points: </h4>
-    <label>{{ group.points }}</label>
-  
-    <h4>Type of game: </h4>
-    <label>{{ group.gametype }}</label>
-  
-    <h4>City: </h4>
-    <label>{{ group.city }}</label>
-  
-    <h4>Address: </h4>
-    <label>{{ group.address }}</label>
-  
-    <h4>Date: </h4>
-    <label>{{ group.date }}</label>
-    
-  
-    <h4>Description: </h4>
-    <label>{{ group.description }}</label>
-  
-    <h4>Game: </h4>
-    <label>{{ group.game }}</label>
+    <div class="group-info-address">
+      <div class="city">
+        <h4>City: </h4>
+        <label>{{ group.city }}</label>
+      </div>
+      <div class="address">
+        <h4>Address: </h4>
+        <label>{{ group.address }}</label>
+      </div>
+    </div>
+    <div class="group-info-type">
+      <div class="date">
+        <h4>Date: </h4>
+        <label>{{ group.date }}</label>
+      </div>
+      <div class="type-game">
+        <h4>Type of game: </h4>
+        <label>{{ group.gametype }}</label>
+      </div>
+    </div>
+    <div class="group-description">
 
-    <br>
-    <br>
+      <h4>Description: </h4>
+      <label>{{ group.description }}</label>
+    </div>
+    <div class="group-game">
+
+      <h4>Game: </h4>
+      <label>{{ group.game }}</label>
+    </div>
     <button [routerLink]="['/groups']">Back</button>
-
+  </div>
 </div>
