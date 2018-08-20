@@ -1,0 +1,6 @@
+<h1> List All Games </h1>
+<div class="games-card" *ngIf="games">
+  <div *ngFor="let game of games">
+    <app-game-card [game]="game"></app-game-card>
+  </div>
+</div>
