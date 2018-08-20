@@ -37,6 +37,17 @@
     box-shadow: 4px 2px  4px 4px rgb(13, 15, 21);
 }
 
+#players-component-home {
+    text-align: center;
+    width: 100%;
+    height: 130px;
+    margin-bottom: 1rem;
+    background: url('../../players.jpg') center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 4px 2px  4px 4px rgb(13, 15, 21);
+}
+
 a {
     vertical-align: middle;
     line-height: 100px;
