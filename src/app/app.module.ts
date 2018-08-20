@@ -48,6 +48,7 @@ const routes: Routes = [
   {path: 'groups', component: MyGroupsPageComponent, canActivate: [ RequireUserGuard ]},
   {path: 'groups/recent', component: RecentGroupsComponent, canActivate: [ RequireUserGuard ]},
   {path: 'players', component: PlayersListPageComponent, canActivate: [RequireUserGuard]},
+  {path: 'players/:id', component: SearchUserDetailComponent, canActivate: [RequireUserGuard]},
   {path: '**', redirectTo: ''}
 ];
 

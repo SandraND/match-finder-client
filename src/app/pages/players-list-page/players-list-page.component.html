@@ -18,5 +18,5 @@
 </form>
 
 <div class="players-cards" *ngIf="user">
-    <h1>{{ user|json }}</h1> 
+  <app-search-user-detail [user]="user"></app-search-user-detail>
 </div>

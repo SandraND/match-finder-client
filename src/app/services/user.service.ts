@@ -19,9 +19,16 @@ export class UserService {
     const options = {
       withCredentials: true
     };
-    console.log(username);
-    console.log(`${this.API_URL}players?q=${username}`);
     return this.httpClient.get(`${this.API_URL}players?q=${username}`, options)
+    .toPromise();
+  }
+
+  acceptOne(userId: any, userCurrent: any): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+
+    return this.httpClient.post(`${this.API_URL}players/${userId}&${userCurrent}`, options)
     .toPromise();
   }
 }
