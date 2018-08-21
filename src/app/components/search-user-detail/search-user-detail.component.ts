@@ -10,7 +10,10 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./search-user-detail.component.css']
 })
 export class SearchUserDetailComponent implements OnInit {
-  @Input() user: Object;
+  @Input() user: {
+    _id: any,
+    username: any
+  };
   userCurrent: any;
 
   constructor(

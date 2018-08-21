@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class ProfilePageComponent implements OnInit {
 
-  private user: any;
+  user: any;
 
   constructor(
     private httpClient: HttpClient,

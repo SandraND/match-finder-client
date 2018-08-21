@@ -8,7 +8,11 @@ import { Input } from '@angular/core';
   styleUrls: ['./game-card.component.css']
 })
 export class GameCardComponent implements OnInit {
-  @Input() game: Object;
+  @Input() game: {
+    _id: any,
+    groupname: any,
+    game: any
+  };
   group: any;
 
   constructor(

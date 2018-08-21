@@ -9,7 +9,18 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./search-group-detail.component.css']
 })
 export class SearchGroupDetailComponent implements OnInit {
-  @Input() group: Object;
+  @Input() group: {
+    _id: any,
+    groupname: string,
+    numplayers: number,
+    points: number,
+    gametype: string,
+    city: string,
+    address: string,
+    date: Date,
+    description: string,
+    game: string
+  };
   user: any;
   // groupId: string;
 

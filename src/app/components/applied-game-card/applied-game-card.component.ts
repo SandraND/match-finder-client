@@ -8,7 +8,11 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./applied-game-card.component.css']
 })
 export class AppliedGameCardComponent implements OnInit {
-  @Input() group: Object;
+  @Input() group: {
+    _id: any,
+    groupname: any,
+    game: any
+  };
   user: any;
 
   constructor() { }

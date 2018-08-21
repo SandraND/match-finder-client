@@ -11,6 +11,7 @@ export class SignUpPageComponent implements OnInit {
 
   username: string;
   password: string;
+  feedbackEnabled: any;
 
   constructor(
     private authService: AuthService,
