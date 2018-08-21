@@ -9,6 +9,7 @@ import { Input } from '@angular/core';
 })
 export class GameCardComponent implements OnInit {
   @Input() game: Object;
+  group: any;
 
   constructor(
   ) { }
