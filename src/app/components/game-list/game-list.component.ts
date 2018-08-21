@@ -10,6 +10,7 @@ export class GameListComponent implements OnInit {
 
   games: any;
 
+
   constructor(
     private groupService: GroupService
   ) { }
@@ -17,6 +18,7 @@ export class GameListComponent implements OnInit {
   ngOnInit() {
     this.groupService.getGames()
     .then(data => this.games = data);
+
   }
 
 }
