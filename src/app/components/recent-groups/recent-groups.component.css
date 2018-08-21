@@ -1,11 +1,8 @@
 #recent-component-home {
+    background-color: #313131;
     text-align: center;
     width: 100%;
-    height: 130px;
-    margin-bottom: 2rem;
-    background: url('../../whf.jpeg') center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100px;
     box-shadow: 4px 2px  4px 4px rgb(13, 15, 21);
 
 }
@@ -13,13 +10,11 @@
 a {
     vertical-align: middle;
     line-height: 100px;
-    text-decoration: none;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 23px;
     color: white;
-    text-shadow: -2px 0px black, 0px 2px black, 2px 0px black, 0px -2px black;
 }
 
 #recent-component-home a {
-    font-size: 45px;
+    font-size: 30px;
 }
