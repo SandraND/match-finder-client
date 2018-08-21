@@ -93,6 +93,12 @@ export class GroupService {
     .toPromise();
   }
 
-
+  getAppliedGroups(): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.API_URL}/applied`, options)
+    .toPromise();
+  }
 
 }

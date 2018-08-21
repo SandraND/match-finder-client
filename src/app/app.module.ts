@@ -34,6 +34,9 @@ import { GameListAllComponent } from './components/game-list-all/game-list-all.c
 import { SearchGroupDetailComponent } from './components/search-group-detail/search-group-detail.component';
 import { PlayersListPageComponent } from './pages/players-list-page/players-list-page.component';
 import { SearchUserDetailComponent } from './components/search-user-detail/search-user-detail.component';
+import { FriendsPageComponent } from './pages/friends-page/friends-page.component';
+import { AppliedGameCardComponent } from './components/applied-game-card/applied-game-card.component';
+import { AppliedGameListComponent } from './components/applied-game-list/applied-game-list.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent, canActivate: [ InitAuthGuard ]},
@@ -77,7 +80,10 @@ const routes: Routes = [
     SearchGroupDetailComponent,
     SearchGroupDetailComponent,
     PlayersListPageComponent,
-    SearchUserDetailComponent
+    SearchUserDetailComponent,
+    FriendsPageComponent,
+    AppliedGameCardComponent,
+    AppliedGameListComponent
   ],
   imports: [
     BrowserModule,
