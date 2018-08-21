@@ -1,7 +1,5 @@
 <div class="search-user-detail">
   <h1>{{ user.username }}</h1>
   <button (click)="acceptOne(user._id)">Add</button>
-  <h1>{{user|json}}</h1>
-  <h1>{{ user._id }}</h1>
   <button [routerLink]="['/']">Back</button>
 </div>
