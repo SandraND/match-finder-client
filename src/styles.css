@@ -15,7 +15,11 @@ body {
 
 body {
   /* background-color: #e8e6e6; */
-  background: url('./app/background.jpg') no-repeat ;
+  background: url('./assets/img/background.jpg') no-repeat ;
   background-size: cover;
+}
+
+button {
   font-family: 'Metamorphous', cursive;
+
 }
