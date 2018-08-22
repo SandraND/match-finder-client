@@ -37,6 +37,8 @@ import { SearchUserDetailComponent } from './components/search-user-detail/searc
 import { FriendsPageComponent } from './pages/friends-page/friends-page.component';
 import { AppliedGameCardComponent } from './components/applied-game-card/applied-game-card.component';
 import { AppliedGameListComponent } from './components/applied-game-list/applied-game-list.component';
+import { FriendListAllComponent } from './components/friend-list-all/friend-list-all.component';
+import { FriendCardComponent } from './components/friend-card/friend-card.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent, canActivate: [ InitAuthGuard ]},
@@ -84,7 +86,9 @@ const routes: Routes = [
     SearchUserDetailComponent,
     FriendsPageComponent,
     AppliedGameCardComponent,
-    AppliedGameListComponent
+    AppliedGameListComponent,
+    FriendListAllComponent,
+    FriendCardComponent
   ],
   imports: [
     BrowserModule,

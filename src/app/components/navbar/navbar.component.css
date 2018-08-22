@@ -3,7 +3,6 @@
     width: 100%;
     background-color: #313131;
     position: relative;
-    /* margin-bottom: 1rem; */
   }
   
   .nav > .nav-header {
@@ -11,11 +10,12 @@
   }
   
   .nav > .nav-header > .nav-title {
+    padding-top: 15px;
+    padding-left: 20px;
     display: inline-block;
     font-size: 22px;
     font-weight: bold;
     color: white;
-    padding: 10px 10px 10px 10px;
   }
   
   .nav > .nav-btn {
@@ -42,10 +42,10 @@
     background-color: #313131;
   }
   
-  .nav > #nav-check {
+  .nav  #nav-check {
     display: none;
   }
-  
+
   @media (max-width:600px) {
     .nav > .nav-btn {
       display: inline-block;
@@ -55,7 +55,7 @@
     }
     .nav > .nav-btn > label {
       display: inline-block;
-      width: 50px;
+      width: 70px;
       height: 50px;
       padding: 13px;
     }
@@ -64,11 +64,12 @@
     }
     .nav > .nav-btn > label > span {
       display: block;
-      width: 25px;
+      width: 35px;
       height: 10px;
-      border-top: 2px solid white;
+      border-top: 4px solid white;
     }
     .nav > .nav-links {
+      border-radius: 5px;
       position: absolute;
       display: block;
       background-color: #313131;
