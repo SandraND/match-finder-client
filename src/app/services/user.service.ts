@@ -15,6 +15,14 @@ export class UserService {
     private httpClient: HttpClient
   ) { }
 
+  getAllUsers(): Promise <any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.API_URL}players/friends`, options)
+    .toPromise();
+  }
+
   getUsers(username: any): any {
     const options = {
       withCredentials: true
