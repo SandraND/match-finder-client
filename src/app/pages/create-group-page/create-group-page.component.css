@@ -1,10 +1,11 @@
 form {
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     margin: 1rem;
     background-color: rgb(40, 46, 56);
-    color: rgb(138, 144, 161);
+    color: rgb(204, 206, 209);
 }
 
 div {
@@ -13,6 +14,8 @@ div {
 
 label {
     font-weight: bold;
+    padding-right: 2rem;
+    margin-left: 1rem;
 }
 
 input {
@@ -20,7 +23,7 @@ input {
     width: 90%;
     background-color: rgb(38, 40, 50);
     border-color: rgb(38, 40, 50);
-    color: rgb(138, 144, 161);
+    color: rgb(204, 206, 209);
     border-radius: 3px;
     border: 1px solid transparent;
     box-shadow: inset 0 1px 2px rgb(13, 15, 21);
@@ -39,44 +42,52 @@ h1 {
     background-color: #3b3d44;
     padding: 0.5rem;
     box-shadow: inset 0 1px 2px rgb(13, 15, 21);
-
-}
-
-
-.group-info-pp {
     display: flex;
     flex-direction: row;
-
-
 }
 
-.group-info-address {
-    display: flex;
-    flex-direction: row;
-
-
-}
-
-.group-info-type {
-    display: flex;
-    flex-direction: row;
+.group-name > input {
+    margin-right: 2rem;
 
 }
 
 .group-description > input {
     min-height: 4rem;
-    
+    margin-right: 2rem;
+}
+
+.group-info-pp > div{
+    margin-right: 2rem;
+    width: 50%;
+    display: flex;
+}
+
+.group-info-address > div {
+    margin-right: 2rem;
+    width: 50%;
+    display: flex;
+}
+
+.group-info-type > div {
+    margin-right: 2rem;
+    width: 50%;
+    display: flex;
+}
+
+.group-game > input {
+    margin-right: 2rem;
 }
 
 button {
-    background-color: #2b2e38;
+    /* background-color: #2b2e38; */
+    border-radius: 10px;
     border-color: #1c1f27;
-    box-shadow: 2px 2px  2px 2px rgb(13, 15, 21);
+    box-shadow: 0px 20px  42px -8px rgb(13, 15, 21);
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-right: 2rem;
     padding-left: 2rem;
-    color: rgb(138, 144, 161);
+    color: rgb(204, 206, 209);
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -86,4 +97,11 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.btn-create{
+    background-color: #64715e;
+}
+.btn-back {
+    background-color: #5a4343;
 }
