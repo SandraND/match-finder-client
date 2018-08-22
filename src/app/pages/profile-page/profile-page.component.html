@@ -1,8 +1,10 @@
 <div class="profile">
   <div [ngClass]="{'is-user': user}" class="info-profile">
+    <div>
     <div class="user-info">
       <label *ngIf="user">Welcome  {{ user.username }}!</label>
     </div>
+  </div>
   </div>
   <div class="my-games">
     <a [routerLink]= "['/groups']"> MY GAMES </a>

@@ -1,5 +1,4 @@
 .user-info {
-    /* margin-top: 3%; */
     display: flex;
     flex-direction: column;
 }
@@ -11,6 +10,8 @@
     margin-bottom: 1rem;
     background-color: rgb(40, 46, 56);
     box-shadow: 2px 2px  2px 2px rgb(13, 15, 21);
+    width: 80%;
+    border-radius: 5px;
 
 }
 
@@ -20,8 +21,10 @@
     padding-bottom: 2rem;
     margin-bottom: 1rem;
     box-shadow: 2px 2px  2px 2px rgb(13, 15, 21);
-
+    width: 80%;
     background-color: rgb(40, 46, 56);
+    border-radius: 5px;
+
 }
 
 .ratings {
@@ -31,6 +34,8 @@
     margin-bottom: 1rem;
     background-color: rgb(40, 46, 56);
     box-shadow: 2px 2px  2px 2px rgb(13, 15, 21);
+    width: 80%;
+    border-radius: 5px;
 
 }
 
@@ -50,13 +55,13 @@ a {
     padding: 5%;
     vertical-align: middle;
     text-decoration: none;
-    color: rgb(138, 144, 161);
+    color: #d1d1d4;
 }
 
 .profile {
-    background: linear-gradient(to top, rgb(55, 64, 80), rgb(16, 19, 24));
-    background-color: #3b3d44;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

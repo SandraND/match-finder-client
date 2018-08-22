@@ -14,6 +14,12 @@ body {
 }
 
 body {
-  background-color: #e8e6e6;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  /* background-color: #e8e6e6; */
+  background: url('./assets/img/background.jpg') no-repeat ;
+  background-size: cover;
+}
+
+button {
+  font-family: 'Metamorphous', cursive;
+
 }
