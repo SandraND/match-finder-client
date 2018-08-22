@@ -1,32 +1,35 @@
-  <div class="search-group-detail">
+<div class="search-group-detail">
+  <div class="container">
     <h3>{{ group.groupname }}</h3>
-
+    <div>
+      <hr>
+    </div>
     <h4>Players: </h4>
     <label>{{ group.numplayers }}</label>
-  
+
     <h4>Points: </h4>
     <label>{{ group.points }}</label>
-  
+
     <h4>Type of game: </h4>
     <label>{{ group.gametype }}</label>
-  
+
     <h4>City: </h4>
     <label>{{ group.city }}</label>
-  
+
     <h4>Address: </h4>
     <label>{{ group.address }}</label>
-  
+
     <h4>Date: </h4>
     <label>{{ group.date }}</label>
-    
-  
+
+
     <h4>Description: </h4>
     <label>{{ group.description }}</label>
-  
+
     <h4>Game: </h4>
     <label>{{ group.game }}</label>
 
+    <button (click)="acceptOne(group._id)">Apply</button>
   </div>
 
-  <button (click)="acceptOne(group._id)">Apply</button>
-
+</div>
