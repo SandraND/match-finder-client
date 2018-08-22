@@ -1,3 +1,4 @@
-<p>
-  friend-list-all works!
-</p>
+<h1>Friends</h1>
+<div *ngIf="users">
+  <app-friend-card [users]="users"></app-friend-card>
+</div>

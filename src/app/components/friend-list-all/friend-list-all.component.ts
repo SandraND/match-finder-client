@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-friend-list-all',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FriendListAllComponent implements OnInit {
 
-  constructor() { }
+  users: any;
+
+  constructor(
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
+    console.log('ON INIT FRIEND LIST ALL');
+    this.userService.getAllUsers()
+    .then(data => this.users = data);
   }
 
 }
