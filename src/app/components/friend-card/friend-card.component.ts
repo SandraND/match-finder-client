@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./friend-card.component.css']
 })
 export class FriendCardComponent implements OnInit {
-  @Input() users: {
+  @Input() user: {
     _id: any,
     username: any
   };
@@ -14,7 +14,7 @@ export class FriendCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.users);
+    console.log(this.user);
   }
 
 }

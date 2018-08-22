@@ -1,4 +1,6 @@
 <h1>Friends</h1>
 <div *ngIf="users">
-  <app-friend-card [users]="users"></app-friend-card>
+  <div *ngFor="let user of users">
+    <app-friend-card [user]="user"></app-friend-card>
+  </div>
 </div>
