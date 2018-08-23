@@ -9,7 +9,6 @@ export class AuthService {
 
   private user: any;
   private userChange: Subject<any> = new Subject();
-
   private API_URL = environment.apiURL + 'auth';
 
   userChange$: Observable<any> = this.userChange.asObservable();
@@ -28,6 +27,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
+
     return this.httpClient.get(`${this.API_URL}/me`, options)
       .toPromise()
       .then((user) => this.setUser(user))
@@ -39,10 +39,10 @@ export class AuthService {
   }
 
   login(user: any): Promise<any> {
-
     const options = {
       withCredentials: true
     };
+
     return this.httpClient.post(`${this.API_URL}/login`, user, options)
       .toPromise()
       .then((data) => this.setUser(data));
@@ -52,6 +52,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
+
     return this.httpClient.post(`${this.API_URL}/signup`, user, options)
     .toPromise()
     .then((data) => this.setUser(data));
@@ -61,6 +62,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
+
     return this.httpClient.post(`${this.API_URL}/logout`, null, options)
     .toPromise()
     .then(() => this.setUser());

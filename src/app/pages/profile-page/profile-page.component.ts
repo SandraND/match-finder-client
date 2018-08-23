@@ -12,7 +12,6 @@ export class ProfilePageComponent implements OnInit {
   user: any;
 
   constructor(
-    private httpClient: HttpClient,
     private authService: AuthService
   ) { }
 

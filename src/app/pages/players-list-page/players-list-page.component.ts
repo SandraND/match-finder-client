@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -34,8 +33,7 @@ export class PlayersListPageComponent implements OnInit {
         this.processing = false;
       })
       .catch(err => {
-        console.log('catch error players list page');
-        this.error = err.error.code; // :-)
+        this.error = err.error.code;
         this.processing = false;
         this.feedbackEnabled = false;
       });

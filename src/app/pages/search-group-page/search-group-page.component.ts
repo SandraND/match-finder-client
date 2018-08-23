@@ -1,7 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { GroupService } from '../../services/group.service';
-import { AuthService } from '../../services/auth.service';
-
 
 @Component({
   selector: 'app-search-group-page',
@@ -36,7 +34,7 @@ export class SearchGroupPageComponent implements OnInit {
         this.processing = false;
       })
       .catch(err => {
-        this.error = err.error.code; // :-)
+        this.error = err.error.code;
         this.processing = false;
         this.feedbackEnabled = false;
       });

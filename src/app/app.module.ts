@@ -16,29 +16,33 @@ import { DetailGroupPageComponent } from './pages/detail-group-page/detail-group
 import { ListGamesPageComponent } from './pages/list-games-page/list-games-page.component';
 import { MyGroupsPageComponent } from './pages/my-groups-page/my-groups-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { RecentGroupsComponent } from './components/recent-groups/recent-groups.component';
+import { PlayersListPageComponent } from './pages/players-list-page/players-list-page.component';
+import { FriendsPageComponent } from './pages/friends-page/friends-page.component';
+
+import { AuthService } from './services/auth.service';
+import { GroupService } from './services/group.service';
+import { UserService } from './services/user.service';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AcceptedRequestCardComponent } from './components/accepted-request-card/accepted-request-card.component';
 import { GroupsCardComponent } from './components/groups-card/groups-card.component';
 import { GameListComponent } from './components/game-list/game-list.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
-import { RecentGroupsComponent } from './components/recent-groups/recent-groups.component';
-import { AuthService } from './services/auth.service';
-import { GroupService } from './services/group.service';
-import { UserService } from './services/user.service';
-
-import { InitAuthGuard } from './guards/init-auth.guard';
-import { RequireAnonGuard } from './guards/require-anon.guard';
-import { RequireUserGuard } from './guards/require-user.guard';
-import { FilterPipe } from './pipes/filter.pipe';
 import { GameListAllComponent } from './components/game-list-all/game-list-all.component';
 import { SearchGroupDetailComponent } from './components/search-group-detail/search-group-detail.component';
-import { PlayersListPageComponent } from './pages/players-list-page/players-list-page.component';
 import { SearchUserDetailComponent } from './components/search-user-detail/search-user-detail.component';
-import { FriendsPageComponent } from './pages/friends-page/friends-page.component';
 import { AppliedGameCardComponent } from './components/applied-game-card/applied-game-card.component';
 import { AppliedGameListComponent } from './components/applied-game-list/applied-game-list.component';
 import { FriendListAllComponent } from './components/friend-list-all/friend-list-all.component';
 import { FriendCardComponent } from './components/friend-card/friend-card.component';
+
+import { InitAuthGuard } from './guards/init-auth.guard';
+import { RequireAnonGuard } from './guards/require-anon.guard';
+import { RequireUserGuard } from './guards/require-user.guard';
+
+import { FilterPipe } from './pipes/filter.pipe';
+
 
 const routes: Routes = [
   {path: '', component: HomePageComponent, canActivate: [ InitAuthGuard ]},
@@ -55,7 +59,7 @@ const routes: Routes = [
   {path: 'players', component: PlayersListPageComponent, canActivate: [RequireUserGuard]},
   {path: 'players/:id', component: SearchUserDetailComponent, canActivate: [RequireUserGuard]},
   {path: 'friends', component: FriendsPageComponent, canActivate: [RequireUserGuard]},
-  {path: '**', redirectTo: ''}
+  {path: '**', component: ErrorPageComponent}
 ];
 
 @NgModule({
