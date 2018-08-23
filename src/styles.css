@@ -17,6 +17,7 @@ body {
   /* background-color: #e8e6e6; */
   background: url('./assets/img/background.jpg') no-repeat ;
   background-size: cover;
+  min-height: 100vh;
 }
 
 button {
