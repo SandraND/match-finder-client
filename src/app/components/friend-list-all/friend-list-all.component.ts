@@ -15,9 +15,12 @@ export class FriendListAllComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('ON INIT FRIEND LIST ALL');
     this.userService.getAllUsers()
-    .then(data => this.users = data);
+    .then(data => {
+      this.users = data;
+      console.log('DATA');
+      console.log(data);
+    });
   }
 
 }

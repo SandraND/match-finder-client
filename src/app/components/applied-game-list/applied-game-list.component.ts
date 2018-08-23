@@ -15,10 +15,16 @@ export class AppliedGameListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  getAppliedGroups () {
     this.groupService.getAppliedGroups()
     .then(data => {
       this.groups = data;
+      console.log('DATA');
+      console.log(data);
     });
   }
+
 
 }
