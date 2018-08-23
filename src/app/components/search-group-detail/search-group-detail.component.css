@@ -1,8 +1,7 @@
 
 .container {
     background: linear-gradient(to top, rgb(55, 64, 80), rgb(42, 42, 56));
-    background-color: rgb(40, 46, 56);
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -13,36 +12,13 @@
 }
 
 .container>div {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 
 .group-game {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
-
-.group-info-pp {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
-.group-info-address {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-
-}
-
-.group-info-type {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
 
 button {
     background-color: #44454a;
@@ -60,14 +36,14 @@ button {
   }
 
 label {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 20px;
 }
-
 
 h3 {
     font-size: 30px;
 }
+
 h4 {
     font-size: 25px;
 }
