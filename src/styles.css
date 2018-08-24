@@ -16,6 +16,8 @@ body {
 body {
   background: url('./assets/img/background.jpg') no-repeat ;
   background-size: cover;
+  font-family: 'Metamorphous', cursive;
+
   min-height: 100vh;
 }
 
