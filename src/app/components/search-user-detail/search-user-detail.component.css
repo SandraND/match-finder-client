@@ -30,9 +30,8 @@ button {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-  }
+}
 
 .container > button {
     align-self: flex-end;
-
 }

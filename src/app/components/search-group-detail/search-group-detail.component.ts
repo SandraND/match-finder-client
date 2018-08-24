@@ -22,7 +22,6 @@ export class SearchGroupDetailComponent implements OnInit {
     game: string
   };
   user: any;
-  // groupId: string;
 
   constructor(
     private groupService: GroupService,

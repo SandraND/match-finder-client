@@ -9,7 +9,6 @@ export class GroupService {
 
   private API_URL = environment.apiURL + 'groups';
 
-
   constructor(
     private httpClient: HttpClient
   ) { }

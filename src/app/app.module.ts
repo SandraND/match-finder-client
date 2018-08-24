@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -42,7 +41,6 @@ import { RequireAnonGuard } from './guards/require-anon.guard';
 import { RequireUserGuard } from './guards/require-user.guard';
 
 import { FilterPipe } from './pipes/filter.pipe';
-
 
 const routes: Routes = [
   {path: '', component: HomePageComponent, canActivate: [ InitAuthGuard ]},

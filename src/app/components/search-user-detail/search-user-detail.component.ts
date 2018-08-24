@@ -25,7 +25,6 @@ export class SearchUserDetailComponent implements OnInit {
 
   ngOnInit() {
     this.userCurrent = this.authService.getUser();
-
   }
 
   acceptOne(userId: any) {
